@@ -1,4 +1,3 @@
-/* CSS */
 :root { 
   font-family         : 'Inter', sans-serif; 
   --BACKGROUND_GREY   : #f7fafc;
@@ -15,32 +14,32 @@
 
 @font-face { 
   font-family: 'Inter'; font-style:  normal; font-weight: 400; font-display: swap;
-  src: url("./font/Inter-Regular.woff2?v=3.19") format("woff2"), url("./font/Inter-Regular.woff?v=3.19") format("woff");
+  src: url("public/css/font/inter/Inter-Regular.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-Regular.woff?v=3.19") format("woff");
 }
 
 @font-face { 
   font-family: 'Inter'; font-style:  normal; font-weight: 500; font-display: swap;
-  src: url("./font/Inter-Medium.woff2?v=3.19") format("woff2"), url("./font/Inter-Medium.woff?v=3.19") format("woff");
+  src: url("public/css/font/inter/Inter-Medium.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-Medium.woff?v=3.19") format("woff");
 }
 
 @font-face { 
   font-family: 'Inter'; font-style:  normal; font-weight: 600; font-display: swap;
-  src: url("./font/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("./font/Inter-SemiBold.woff?v=3.19") format("woff");
+  src: url("public/css/font/inter/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-SemiBold.woff?v=3.19") format("woff");
 }
 
 @font-face { 
   font-family: 'Inter'; font-style:  normal; font-weight: 700; font-display: swap;
-  src: url("./font/Inter-Bold.woff2?v=3.19") format("woff2"), url("./font/Inter-Bold.woff?v=3.19") format("woff");
+  src: url("public/css/font/inter/Inter-Bold.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-Bold.woff?v=3.19") format("woff");
 }
 
 @font-face { 
   font-family: 'Inter'; font-style:  normal; font-weight: 800; font-display: swap;
-  src: url("./font/Inter-ExtraBold.woff2?v=3.19") format("woff2"), url("./font/Inter-ExtraBold.woff?v=3.19") format("woff");
+  src: url("public/css/font/inter/Inter-ExtraBold.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-ExtraBold.woff?v=3.19") format("woff");
 }
   
 @font-face { 
   font-family: 'Inter'; font-style:  normal; font-weight: 900; font-display: swap;
-  src: url("./font/Inter-Black.woff2?v=3.19") format("woff2"), url("./font/Inter-Black.woff?v=3.19") format("woff");
+  src: url("public/css/font/inter/Inter-Black.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-Black.woff?v=3.19") format("woff");
 }
 
 * {
@@ -52,237 +51,46 @@ html {
   scroll-behavior: smooth;
 }
 
-a {
-  color: #2071c5;
-  text-decoration: underline;  
-}
-
-p {
-  font-size   : 18px;
-  margin-top  : 22px;
-  line-height : 1.5;
-}
-
-img { width         : 100%;   }
-
-h1  { font-size     : 2.00em; }
-h2  { font-size     : 1.50em; }
-h3  { font-size     : 1.25em; }
-h4  { font-size     : 1.00em; }
-
-h1, h2, h3, h4 {
-  margin-top    : 32px;
-  margin-bottom : 16px;
-}
-
-
-ol li {
-  margin-bottom   : 2px;
-  margin-left     : 20px;
-}
-
-ul {
-  margin-left     : 7px;
-}
-
-ul li {
-  margin-bottom   : 2px;
-  margin-left     : 20px;
-}
-
-#sidebar {
-  width           : 360px;
-  background      : var(--BACKGROUND_GREY);
-  border-right    : solid var(--COLOR_BORDER) 1px;
-  height          : 100vh;
-}
-
-#content-main {
-
-  /* margin          : auto!important; */
-  width           : 890px;
-  /* margin-left     : 96px; */
-  padding-right   : 96px;
-  padding-top     : 50px;
-  padding-bottom  : 50px;
-}
-
-#content-side {
-  padding-top     : 50px;
-}
-
-.table-of-content {
-  font-size     : 14px;
-  list-style    : none;
-  width         : 250px;
-}
-
-.table-of-content li {
-  margin-bottom   : 10px;
-  cursor          : pointer;
-  margin-left     : 0;
-}
-
-.table-of-content li a {
-  text-decoration : none;
-  color           : #4485f5;
-  font-weight     : bold;
-}
-
-.table-of-content--title {
-  margin-bottom: 15px;
-}
-
-.content-main--section {
-  border-bottom   : solid #dedede 1px;
-  padding-bottom  : 24px;
-}
-
-.button {
-  display         : flex;
-  border          : solid #dedede 1px; 
-  padding         : 10px; 
-  border-radius   : 5px; 
-  cursor          : pointer;
-}
-
-.button-icon {
-  width           : 24px; 
-  height          : 24px;
-}
-
-.button-text {
-  margin-left     : 25px; 
-  margin-top      : 6px;
-  font-weight     : bold;
-}
-
-#avatar {
-  display         : inline-block;
-  background      : url(imgs/avatar.png);
-  background-size : 86px;
-  width           : 86px;
-  height          : 86px;
-}
-
-.icon {
-  display         : inline-block;
-  background-size : 16px!important;
-  width           : 16px;
-  height          : 16px;
-}
-
-.icon-youtube  { background : url(imgs/youtube.png);  }
-.icon-github   { background : url(imgs/github.png);   }
-.icon-npm      { background : url(imgs/npm.png);      }
-.icon-linkedin { background : url(imgs/linkedin.png); }
-.icon-email    { background : url(imgs/email.png);    }
-.icon-pdf      { background : url(imgs/pdf.png);      }
-.icon-pdf--blue{ background : url(imgs/pdf-blue.png); }
-
-
-.cv-header {
-  color       : #2071c5; 
-  font-size   : 20px; 
-  font-weight : bold;
-}
-
-.cv-key     { width: 200px; }
-.cv-value   { width: 740px; }
-
-
-.is-primary {
-  color       : var(--COLOR_PRIMARY);
-}
-
-.is-primary--bold {
-  color       : var(--COLOR_PRIMARY);
-  font-weight : bold;
-}
-
-.pill {
-
-  display       : inline-block; 
-  padding       : 6px; 
-  background    : var(--COLOR_PRIMARY);
-  font-size     : 12px;   
-  color         : #fff; 
-  border-radius : 3px;
-}
-
-.list-section li:hover {
-  color: var(--COLOR_SECONDARY);
-}
-
-table {
-  border-collapse: collapse;
-  margin-top      : 24px ;
-}
-
-table tr:nth-child(even) td { 
-  background      : rgba(222,222,222, 0.2); 
-}
-
-table tr th {
-  background      : rgba(222,222,222, 0.2);
-  border          : solid #dedede 1px;
-  padding         : 12px 13px;
-}
-
-table tr td {
-  border          : solid #dedede 1px;
-  padding         : 6px 13px;
-}
-
-
-#content-main ul li{
-  font-size     : 18px;
-  margin-top    : 7px;
-  margin-bottom : 5px;
-}
-
-#content-main ol li{
-  font-size     : 18px;
-  margin-top    : 7px;
-  margin-bottom : 5px;
+body {
+  background: #f9ffda;
 }
 
 .header {
-  /* margin          : auto; 
-  width           : 1200px;  */
-  border-bottom   : solid #dedede 1px; 
-}
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    width: 100%;
 
-.logo {
-  width   : 32px; 
-  height  : 32px; 
-  margin  : 16px 16px 16px 0;
-}
 
-.logo-text {
-  margin      : 20px 16px 12px 8px; 
-  font-weight : bold;
+    display: flex; 
+    padding: 8px; 
+    justify-content: space-between;
 }
 
 .wrapper {
-  margin          : auto; 
-  width           : 1200px; 
+    padding: 32px;
 }
 
 
-ol li {
-  list-style-type : none;
-  margin-left     : 0px;
+.section {
+    margin: 16px 0;
 }
 
-ol li a {
-  color           : #2071c5;
-  font-weight     : bold;
-  text-decoration : none;
+ul li {
+    list-style: none;
+    font-family: 'Inter'
 }
+    
 
+.bc-success  { background : #28b02f; }
+.bc-fail     { background : #d60b52; }
+.bc-blue     { color      : #2196f3; }
+.bc-lightblue{ background : #bab7ff; }
+.bc-orange   { background : #fdc576; }
+.bc-purple   { background : #dca3b7; }
+.bc-pink     { background : #f99a9a; }
 
-iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
