@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetLet</title>
+    <style>
+    
+    /* CSS */
+    :root { 
+  font-family         : 'Inter', sans-serif; 
+  --BACKGROUND_GREY   : #f7fafc;
+  --BACKGROUND_WHITE  : #f7fafc;
+  --COLOR_BORDER      : #ebebee;
+
+  --COLOR_PRIMARY     : #d60b52;
+  --COLOR_SECONDARY   : #2071c5;
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter', sans-serif; }
+}
+
+@font-face { 
+  font-family: 'Inter'; font-style:  normal; font-weight: 400; font-display: swap;
+  src: url("public/css/font/inter/Inter-Regular.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-Regular.woff?v=3.19") format("woff");
+}
+
+@font-face { 
+  font-family: 'Inter'; font-style:  normal; font-weight: 500; font-display: swap;
+  src: url("public/css/font/inter/Inter-Medium.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-Medium.woff?v=3.19") format("woff");
+}
+
+@font-face { 
+  font-family: 'Inter'; font-style:  normal; font-weight: 600; font-display: swap;
+  src: url("public/css/font/inter/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+
+@font-face { 
+  font-family: 'Inter'; font-style:  normal; font-weight: 700; font-display: swap;
+  src: url("public/css/font/inter/Inter-Bold.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-Bold.woff?v=3.19") format("woff");
+}
+
+@font-face { 
+  font-family: 'Inter'; font-style:  normal; font-weight: 800; font-display: swap;
+  src: url("public/css/font/inter/Inter-ExtraBold.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-ExtraBold.woff?v=3.19") format("woff");
+}
+  
+@font-face { 
+  font-family: 'Inter'; font-style:  normal; font-weight: 900; font-display: swap;
+  src: url("public/css/font/inter/Inter-Black.woff2?v=3.19") format("woff2"), url("public/css/font/inter/Inter-Black.woff?v=3.19") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    width: 100%;
+
+
+    display: flex; 
+    padding: 8px; 
+    justify-content: space-between;
+}
+
+.wrapper {
+    padding: 32px;
+}
+
+
+.section {
+    margin: 16px 0;
+}
+
+ul li {
+    list-style: none;
+    font-family: 'Inter'
+}
+    
+
+.bc-success  { background : #28b02f; }
+.bc-fail     { background : #d60b52; }
+.bc-blue     { color      : #2196f3; }
+.bc-lightblue{ background : #bab7ff; }
+.bc-orange   { background : #fdc576; }
+.bc-purple   { background : #dca3b7; }
+.bc-pink     { background : #f99a9a; }
+
+
+    </style>
+
+</head>
+<body style="background: #f9ffda;">
+
+    <div class="wrapper">
+
+      <div style="text-align: center; margin-bottom: 36px;">
+        <img style="width: 60%; margin: auto;" src="./public/imgs/logo.png">
+        <div style="color:#3a3a3a;font-weight: bold; font-size: 28px; text-transform: uppercase;">Дневен бюлетин</div>
+      </div>
+    
+    <div class="section" onclick="redirectToURL()">
+        <div style="background: #a9b7f9;" class="header bc-lightblue">
+          <div style="margin-top: 20px; margin-left: 16px; font-size: 20px; color: #3a3a3a">Кучета</div>
+          <img style="margin-right: 16px;" src="./public/imgs/icon-dog-64.png">
+        </div>
+    </div>
+
+    <div class="section" onclick="redirectToURL()">
+        <div style="background: #9ee1bf;" class="header bc-purple">
+          <img style="margin-left: 16px;" src="./public/imgs/icon-cat-64.png">
+          <div style="margin-top: 20px; margin-right: 16px; font-size: 20px; color: #3a3a3a">Котки</div>
+        </div>
+    </div>    
+
+    <div class="section" onclick="redirectToURL()">
+        <div style="background: #d9f49d;" class="header bc-pink">
+          <div style="margin-top: 20px; margin-left: 16px; font-size: 20px; color: #3a3a3a">Кучета и Котки</div>
+          <img style="margin-right: 16px;" src="./public/imgs/icon-pets-64.png">
+        </div>
+    </div>    
+</div>
+
+  <script>
+
+    function redirectToURL() {
+        // Array of static URLs
+        var urls = [
+            'articles/01.dirofilarioza/',
+            'articles/02.deworming/',
+            'articles/03.vacination/',
+            'articles/04.poison-food-and-first-aid/',
+            'articles/05.castration/',
+            'articles/06.tick-removal/',
+            'articles/07.legality/',
+        ];
+
+        // Get the current day of the week (0 for Sunday, 1 for Monday, ..., 6 for Saturday)
+        var today = new Date().getDay();
+
+        // Redirect to the corresponding URL based on the current day of the week
+        // Subtracting 1 because JavaScript considers Sunday as 0 but in our array, it's at index 0.
+        window.location.href = urls[today - 1];
+    }
+  
+  </script>
+
+</body>
+</html>
