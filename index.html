@@ -23,14 +23,14 @@
       </div>
     </div>
 
-    <div class="section" onclick="redirectToURL()">
+    <div class="section" onclick="redirectToURLPets()">
       <div style="background: #9ee1bf;" class="header bc-purple">
         <img style="margin-left: 16px;" src="./public/imgs/icon-cat-64.png">
         <div style="margin-top: 20px; margin-right: 16px; font-size: 20px; color: #3a3a3a">Котки</div>
       </div>
     </div>    
 
-    <div class="section" onclick="redirectToURL()">
+    <div class="section" onclick="redirectToURLPets()">
       <div style="background: #d9f49d;" class="header bc-pink">
         <div style="margin-top: 20px; margin-left: 16px; font-size: 20px; color: #3a3a3a">Кучета и Котки</div>
         <img style="margin-right: 16px;" src="./public/imgs/icon-pets-64.png">
@@ -41,9 +41,24 @@
   <script>
 
     function redirectToURL() {
-        // Array of static URLs
+
         var urls = [
             'articles/01.dirofilarioza/',
+            'articles/01.dirofilarioza/',
+            'articles/01.dirofilarioza/',
+            'articles/01.dirofilarioza/',
+            'articles/01.dirofilarioza/',
+            'articles/01.dirofilarioza/',
+            'articles/01.dirofilarioza/',
+        ];
+
+        var today = new Date().getDay();
+        window.location.href = urls[today - 1];
+    }
+
+    function redirectToURLPets() {
+
+        var urls = [
             'articles/02.deworming/',
             'articles/03.vacination/',
             'articles/04.poison-food-and-first-aid/',
@@ -52,11 +67,7 @@
             'articles/07.legality/',
         ];
 
-        // Get the current day of the week (0 for Sunday, 1 for Monday, ..., 6 for Saturday)
         var today = new Date().getDay();
-
-        // Redirect to the corresponding URL based on the current day of the week
-        // Subtracting 1 because JavaScript considers Sunday as 0 but in our array, it's at index 0.
         window.location.href = urls[today - 1];
     }
   
