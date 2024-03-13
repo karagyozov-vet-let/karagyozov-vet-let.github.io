@@ -516,3 +516,9 @@ ol li a {
     font-size       : 14px;
     margin          : 16px -8px;
 }
+
+
+.callout {
+    background  : rgba(255,212,152, 0.5);
+    padding     : 8px;
+}
