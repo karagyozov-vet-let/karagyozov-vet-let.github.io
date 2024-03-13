@@ -508,3 +508,11 @@ ol li a {
 #menuToggle input:checked~this-title {
     display: block !important;
 }
+
+
+.tt {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 8px 0;
+}
