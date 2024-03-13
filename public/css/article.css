@@ -84,7 +84,7 @@ p {
 }
 
 img {
-    width: 50%;
+    width: 100%;
     margin-top: 16px;
 }
 
@@ -511,8 +511,8 @@ ol li a {
 
 
 .tt {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin: 8px 0;
+    font-weight     : bold;
+    text-transform  : uppercase;
+    font-size       : 14px;
+    margin          : 16px -8px;
 }
