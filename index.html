@@ -43,9 +43,9 @@
     function redirectToURLDog() {
 
         var urls = [
-            'articles/01.dirofilarioza/',
+            'articles/01.dirofilariosis/',
             'articles/02.deworming/',
-            'articles/03.vacination/',
+            'articles/03.vaccination/',
             'articles/04.poison-food-and-first-aid/',
             'articles/05.castration/',
             'articles/06.tick-removal/',
@@ -61,7 +61,7 @@
 
         var urls = [
             'articles/02.deworming/',
-            'articles/03.vacination/',
+            'articles/03.vaccination/',
             'articles/04.poison-food-and-first-aid-cat/',
             'articles/05.castration/',
             'articles/06.tick-removal/',
@@ -70,16 +70,16 @@
         ];
 
         var today = new Date().getDay();
-        var index = today === 0 ? 6 : today - 1;
+        var index = today === 0 ? 2 : today - 1;
         window.location.href = urls[index];
     }
 
     function redirectToURLPets() {
 
         var urls = [
-          'articles/01.dirofilarioza/',
+          'articles/01.dirofilariosis/',
           'articles/02.deworming/',
-          'articles/03.vacination/',
+          'articles/03.vaccination/',
           'articles/04.poison-food-and-first-aid-cat/',
           'articles/05.castration/',
           'articles/06.tick-removal/',
@@ -87,7 +87,7 @@
         ];
 
         var today = new Date().getDay();
-        var index = today === 0 ? 6 : today - 1;
+        var index = today === 7 ? 1 : today + 1;
         window.location.href = urls[index];
     }
   
