@@ -49,11 +49,12 @@
             'articles/04.poison-food-and-first-aid/',
             'articles/05.castration/',
             'articles/06.tick-removal/',
-            'articles/07.legality/',
+            'articles/07.legality/'
         ];
 
         var today = new Date().getDay();
-        window.location.href = urls[today - 1];
+        var index = today === 0 ? 6 : today - 1;
+        window.location.href = urls[index];
     }
 
     function redirectToURLCat() {
@@ -65,10 +66,12 @@
             'articles/05.castration/',
             'articles/06.tick-removal/',
             'articles/07.legality/',
+            'articles/04.poison-food-and-first-aid-cat/'
         ];
 
         var today = new Date().getDay();
-        window.location.href = urls[today - 1];
+        var index = today === 0 ? 6 : today - 1;
+        window.location.href = urls[index];
     }
 
     function redirectToURLPets() {
@@ -84,7 +87,8 @@
         ];
 
         var today = new Date().getDay();
-        window.location.href = urls[today - 1];
+        var index = today === 0 ? 6 : today - 1;
+        window.location.href = urls[index];
     }
   
   </script>
