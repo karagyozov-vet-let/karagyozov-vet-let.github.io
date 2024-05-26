@@ -16,14 +16,14 @@
       <div style="color:#3a3a3a;font-weight: bold; font-size: 28px; text-transform: uppercase;">Дневен бюлетин</div>
     </div>
     
-    <div class="section" onclick="redirectToURL()">
+    <div class="section" onclick="redirectToURLDog()">
       <div style="background: #a9b7f9;" class="header bc-lightblue">
         <div style="margin-top: 20px; margin-left: 16px; font-size: 20px; color: #3a3a3a">Кучета</div>
         <img style="margin-right: 16px;" src="./public/imgs/icon-dog-64.png">
       </div>
     </div>
 
-    <div class="section" onclick="redirectToURLPets()">
+    <div class="section" onclick="redirectToURLCat()">
       <div style="background: #9ee1bf;" class="header bc-purple">
         <img style="margin-left: 16px;" src="./public/imgs/icon-cat-64.png">
         <div style="margin-top: 20px; margin-right: 16px; font-size: 20px; color: #3a3a3a">Котки</div>
@@ -40,16 +40,31 @@
 
   <script>
 
-    function redirectToURL() {
+    function redirectToURLDog() {
 
         var urls = [
             'articles/01.dirofilarioza/',
-            'articles/01.dirofilarioza/',
-            'articles/01.dirofilarioza/',
-            'articles/01.dirofilarioza/',
-            'articles/01.dirofilarioza/',
-            'articles/01.dirofilarioza/',
-            'articles/01.dirofilarioza/',
+            'articles/02.deworming/',
+            'articles/03.vacination/',
+            'articles/04.poison-food-and-first-aid/',
+            'articles/05.castration/',
+            'articles/06.tick-removal/',
+            'articles/07.legality/',
+        ];
+
+        var today = new Date().getDay();
+        window.location.href = urls[today - 1];
+    }
+
+    function redirectToURLCat() {
+
+        var urls = [
+            'articles/02.deworming/',
+            'articles/03.vacination/',
+            'articles/04.poison-food-and-first-aid-cat/',
+            'articles/05.castration/',
+            'articles/06.tick-removal/',
+            'articles/07.legality/',
         ];
 
         var today = new Date().getDay();
@@ -59,12 +74,13 @@
     function redirectToURLPets() {
 
         var urls = [
-            'articles/02.deworming/',
-            'articles/03.vacination/',
-            'articles/04.poison-food-and-first-aid/',
-            'articles/05.castration/',
-            'articles/06.tick-removal/',
-            'articles/07.legality/',
+          'articles/01.dirofilarioza/',
+          'articles/02.deworming/',
+          'articles/03.vacination/',
+          'articles/04.poison-food-and-first-aid-cat/',
+          'articles/05.castration/',
+          'articles/06.tick-removal/',
+          'articles/07.legality/',
         ];
 
         var today = new Date().getDay();
