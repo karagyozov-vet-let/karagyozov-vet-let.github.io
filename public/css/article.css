@@ -9,12 +9,19 @@
     --COLOR_SECONDARY: #2071c5;
 }
 
-@supports (font-variation-settings: normal) {
+/* @supports (font-variation-settings: normal) {
     :root {
         font-family: 'Inter', sans-serif;
     }
+} */
+
+
+@font-face {
+    font-family: "SofiaSans-VariableFont_wght";
+    src: url(./font/SofiaSans-VariableFont_wght.ttf);
 }
 
+/* 
 @font-face {
     font-family: 'Inter';
     font-style: normal;
@@ -61,11 +68,12 @@
     font-weight: 900;
     font-display: swap;
     src: url("./font/Inter-Black.woff2?v=3.19") format("woff2"), url("./font/Inter-Black.woff?v=3.19") format("woff");
-}
+} */
 
 * {
     margin: 0;
     padding: 0;
+    font-family: SofiaSans-VariableFont_wght;
 }
 
 html {
@@ -328,7 +336,7 @@ width           : 1200px;  */
 }
 
 .wrapper {
-    padding: 32px;
+    padding: 0px 32px;
 }
 
 
@@ -376,7 +384,7 @@ ol li a {
 #menuToggle {
     display: block;
     position: relative;
-    top: 50px;
+    top: 32px;
     left: 32px;
 
     z-index: 1;
@@ -425,7 +433,7 @@ ol li a {
     margin-bottom: 5px;
     position: relative;
 
-    background: #cdcdcd;
+    background: #e05a05;
     border-radius: 3px;
 
     z-index: 1;
@@ -482,7 +490,7 @@ ol li a {
     padding-top: 125px;
     height: 100vh;
 
-    background: #ededed;
+    background: #dedede;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -496,10 +504,14 @@ ol li a {
 #menu li {
     padding: 10px 0;
     font-size: 18px;
+    color: #e05a05;
+    font-weight: bolder;
+    border-bottom: 0.09rem solid #434343d1;
 }
 
 #menuToggle input:checked~ul {
     transform: none;
+    box-shadow: 0px 10px 20px 10000px rgb(0 0 0 / 50%);
 }
 
 .this-title {
@@ -522,4 +534,45 @@ ol li a {
 .callout {
     background  : rgba(255,212,152, 0.5);
     padding     : 8px;
+}
+
+
+
+#header-container {
+    background: #ffffff;
+    box-shadow: 0px 10px 10px rgb(222 222 222 / 50%);
+    border-bottom: 7px solid #249ea0;
+}
+
+
+#logo-name {
+    padding: 0px 15px;
+    margin: 0 auto 0 0;
+    display: block;
+    position: relative;
+    left: 75px;
+    z-index: 1;
+    user-select: none;
+    font-size: xx-large;
+    font-weight: 500;
+    color: #778383;
+}
+
+
+#logo-img-header {
+    height: 13px;
+    width: 40px;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    top: -42px;
+    left: 189px;
+    z-index: 1;
+}
+
+
+#logo-img-header img {
+    padding: 0px 15px;
+    position: relative;
+    margin: 0px;
 }
